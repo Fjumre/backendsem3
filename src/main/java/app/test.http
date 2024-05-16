@@ -63,7 +63,7 @@ GET http://localhost:7007/api/user/6
 
 ###
 
-POST http://localhost:7007/api/auth/register
+POST http://localhost:7070/api/auth/register
 
 {
 "name": "HHH",
@@ -76,7 +76,7 @@ POST http://localhost:7007/api/auth/register
 ###
 
 
-PUT http://localhost:7007/api/user/update/6
+PUT http://localhost:7070/api/user/update/6
 
 {
 "name": "kllj",
@@ -87,28 +87,28 @@ PUT http://localhost:7007/api/user/update/6
 
 ###
 
-DELETE http://localhost:7007/api/user/delete/5
+DELETE http://localhost:7070/api/user/delete/5
 
 
 ###
 
 
-GET http://localhost:7007/api/events/allregistrations/1
+GET http://localhost:7070/api/events/allregistrations/1
 
 ###
 
 
-GET http://localhost:7007/api/events/registration/1
+GET http://localhost:7070/api/events/registration/1
 
 ###
 
 
-POST http://localhost:7007/api/events/eventregistration?event=10&user=2
+POST http://localhost:7070/api/events/eventregistration?event=10&user=2
 
 
 ###
 
-POST http://localhost:7007/api/events/eventregistration/8
+POST http://localhost:7070/api/events/eventregistration/8
 
 {
 "id":5
@@ -117,7 +117,7 @@ POST http://localhost:7007/api/events/eventregistration/8
 
 ###
 
-POST http://localhost:7007/api/events/removeuserevent/8
+POST http://localhost:7070/api/events/removeuserevent/8
 
 {
 "id": 5
@@ -126,19 +126,19 @@ POST http://localhost:7007/api/events/removeuserevent/8
 ###
 
 
-GET http://localhost:7007/api/events/eventsbycategory/2
+GET http://localhost:7070/api/events/eventsbycategory/2
 
 
 ###
 
 
-GET http://localhost:7007/api/events/eventsbystatus/Active
+GET http://localhost:7070/api/events/eventsbystatus/Active
 
 
 ###
 
 
-POST http://localhost:7007/api/auth/login
+POST http://localhost:7070/api/auth/login
 
 {
 "name": "Harry",
