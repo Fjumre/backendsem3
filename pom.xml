@@ -205,7 +205,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>app/Main</mainClass> <!-- Replace with your Main class -->
+                            <mainClass>app/Main.java</mainClass> <!-- Replace with your Main class -->
                         </manifest>
                     </archive>
                 </configuration>
