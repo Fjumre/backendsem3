@@ -1,0 +1,147 @@
+GET http://localhost:7007/api/events/
+
+###
+
+GET http://localhost:7007/api/events/10
+
+
+###
+
+POST http://localhost:7007/api/events/create
+
+{
+"title": "Dans",
+"description": "dans",
+"date": "2025-02-02",
+"time": "10:00",
+"duration": 120,
+"capacity": 36,
+"location": "København",
+"instructor": "Bibi",
+"price": 1215.00,
+"status": "Active",
+"category": null
+}
+
+
+###
+
+PUT http://localhost:7007/api/events/update/10
+
+{
+  "title": "Løb",
+  "description": "This is an example event",
+  "date": "2024-04-05",
+  "time": "13:30",
+  "duration": 120,
+  "capacity": 50,
+  "location": "Aarhus",
+  "instructor": "John Doe",
+  "price": 20.99,
+  "category": {
+  "CategoryID": 2,
+  "CategoryName": "løb"
+},
+  "status": "Active"
+}
+
+
+
+
+###
+
+DELETE http://localhost:7007/api/events/delete/10
+
+
+###
+
+GET http://localhost:7007/api/user/all
+
+###
+
+GET http://localhost:7007/api/user/6
+
+###
+
+POST http://localhost:7007/api/auth/register
+
+{
+"name": "HHH",
+"password": "1678",
+"email": "hk@hhhh.com",
+"phoneNumber": 99324422
+
+}
+
+###
+
+
+PUT http://localhost:7007/api/user/update/6
+
+{
+"name": "kllj",
+"password": "66655",
+"email": "vvvv@hhhh.com",
+"phoneNumber": 55444422
+}
+
+###
+
+DELETE http://localhost:7007/api/user/delete/5
+
+
+###
+
+
+GET http://localhost:7007/api/events/allregistrations/1
+
+###
+
+
+GET http://localhost:7007/api/events/registration/1
+
+###
+
+
+POST http://localhost:7007/api/events/eventregistration?event=10&user=2
+
+
+###
+
+POST http://localhost:7007/api/events/eventregistration/8
+
+{
+"id":5
+}
+
+
+###
+
+POST http://localhost:7007/api/events/removeuserevent/8
+
+{
+"id": 5
+}
+
+###
+
+
+GET http://localhost:7007/api/events/eventsbycategory/2
+
+
+###
+
+
+GET http://localhost:7007/api/events/eventsbystatus/Active
+
+
+###
+
+
+POST http://localhost:7007/api/auth/login
+
+{
+"name": "Harry",
+"password": "1234"
+
+}

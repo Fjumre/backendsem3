@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  restapi:
+    image: fjumre/javalin-auth-api:latest
+    container_name: restapi
+    restart: unless-stopped
+    networks:
+      - frontend
+      - backend
+    environment:
+      CONNECTION_STR: jdbc:postgresql://db:5432/
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: projectsem3
+      DEPLOYED: "TRUE"
+      SECRET_KEY: DetteErEnHemmeligNøgleTilAtDanneJWT_Tokensmed
+      TOKEN_EXPIRE_TIME: 1800000
+      ISSUER: cphbusiness.dk
+    ports:
+      - "7070:7070"
+
+  db:
+    image: postgres:latest
+    container_name: db
+    restart: unless-stopped
+    networks:
+      - backend
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+
+networks:
+  frontend:
+    name: frontend
+    driver: bridge
+  backend:
+    name: backend
+    driver: bridge
